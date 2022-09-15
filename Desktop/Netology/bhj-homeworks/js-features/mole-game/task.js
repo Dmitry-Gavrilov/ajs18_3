@@ -1,4 +1,3 @@
-
 for (let index = 1; index < 10; index++) { 
     let dead = document.getElementById("dead");
     let lost = document.getElementById("lost");
@@ -9,17 +8,17 @@ for (let index = 1; index < 10; index++) {
       dead.textContent++;
     } else lost.textContent++;    
     
-  if (dead.textContent >= 10) {
-    alert('Вы победили');
+  function clear() {
     dead.textContent = 0;
     lost.textContent = 0;
+  }    
+  if (dead.textContent >= 10) {
+    alert('Вы победили');
+    clear()
   } 
     if (lost.textContent >= 5) {
     alert('Вы проиграли');
-    dead.textContent = 0;
-    lost.textContent = 0;
+    clear()
    }
   }
 }
-
- 
